@@ -39,9 +39,9 @@ jobs:
 
     - name: Test SSH Connection and Run Code
       run: |
-        echo -n "${{ secrets.SSH_KEY }}" > key.pem 
+        echo -n "${{ secrets.SSH_SERVER_PRIVATE_KEY }}" > key.pem 
         chmod 400 key.pem 
-        ssh -o StrictHostKeyChecking=no -T -i key.pem gcp@${{ secrets.SSH_SERVER }} << EOF
+        ssh -o StrictHostKeyChecking=no -T -i key.pem gcp@${{ secrets.SSH_SERVER_IP }} << EOF
           sudo rm -Rf ./app-cicd-dio2/
           sudo git clone https://github.com/carlosfalcone/k8-projeto2-den.git
           cd k8-projeto2-den
