@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql-init-script
+data:
+  init.sql: |
+    CREATE TABLE mensagens (
+        id int,
+        nome varchar(50),
+        mensagem varchar(100)
+    );
