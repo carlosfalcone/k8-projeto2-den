@@ -4,7 +4,7 @@ echo "O arquivo load-balancer deve ser executado previamente na maquina virtual 
 
 kubectl apply -f secrets.yml --record
 kubectl apply -f mysql-deployment.yml --record
-kubectl apply -f mysql-init-script.yml --record
+# kubectl apply -f mysql-init-script.yml --record #testar se precisa ou nao rodar esta linha de comando
 
 kubectl apply -f app-deployment.yml --record
 
