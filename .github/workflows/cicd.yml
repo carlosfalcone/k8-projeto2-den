@@ -46,6 +46,7 @@ jobs:
           sudo git clone https://github.com/carlosfalcone/k8-projeto2-den.git
           cd k8-projeto2-den
           sudo chmod +x ./script.sh
+          sudo chmod +x ./script-delete.sh
           ./script.sh
         EOF
 
